@@ -1,0 +1,1 @@
+# Finanzarchitektur-by-Johannes-Placzek
