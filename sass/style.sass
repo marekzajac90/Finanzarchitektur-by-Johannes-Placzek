@@ -1,0 +1,274 @@
+// textcolor      #707070
+// extracolor     #AA8C41 
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+body
+    font-family: 'Montserrat', sans-serif
+
+h1
+    font-size: 4vw
+    line-height: 40px
+    text-transform: uppercase
+    letter-spacing: 7px
+    color: #fff
+    @media (min-width: 750px) and (orientation: portrait)
+        line-height: 60px
+    @media (min-width: 560px) and (orientation: landscape)
+        font-size: 2.5vw
+    @media (min-width: 1024px) and (orientation: landscape)
+        font-size: 35px
+        line-height: 60px
+    @media (min-width: 1300px) and (orientation: landscape)
+        font-size: 45px
+        line-height: 90px
+h2
+    font-size: 55px
+    font-weight: 300
+    color: #AA8C41
+h3
+    font-size: 3vw
+    line-height: 30px
+    font-weight: 300
+    letter-spacing: 10px
+    color: #ffffff  
+    @media (min-width: 750px) and (orientation: portrait)
+        line-height: 50px
+    @media (min-width: 980px) and (orientation: portrait)
+        line-height: 60px
+    @media (min-width: 560px) and (orientation: landscape)
+        font-size: 2vw
+    @media (min-width: 1024px) and (orientation: landscape)
+        font-size: 25px
+        line-height: 60px
+a 
+    text-decoration: none 
+    color: #ffffff
+    text-transform: uppercase
+    letter-spacing: 5px
+    font-size: 16px
+    line-height: 30px
+    padding-bottom: 5px
+    overflow: hidden
+    &:hover
+        border-bottom: 2px solid #AA8C41
+.button
+    background-color: transparent
+    border: 2px solid #AA8C41
+    border-radius: 50px
+    width: 190px
+    height: 50px
+    color: #ffffff
+    font-size: 16px
+    letter-spacing: 10px
+    text-transform: uppercase
+    text-align: center
+    @media (min-width: 980px) and (orientation: portrait)
+        width: 250px
+        height: 80px
+        font-size: 22px
+    @media (min-width: 560px) and (orientation: landscape)
+        width: 150px
+        height: 35px
+        font-size: 10px
+    @media (min-width: 640px) and (orientation: landscape)
+        width: 180px
+        height: 45px
+        font-size: 12px
+    &:hover
+        background-color: #AA8C41
+.ico
+    width: 40px
+    height: 40px
+    background-position: center center
+    background-size: cover
+    background-repeat: no-repeat
+.fsvideo
+    position: fixed
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    overflow: hidden
+    z-index: -100
+    &__video
+        position: absolute
+        top: 0
+        left: 0
+        object-fit: cover
+        width: 100%
+        height: 100%
+        z-index: -99
+.header
+    position: relative
+    width: 100%
+    height: 100vh 
+    &__nav--hamburger
+        position: fixed
+        left: 80%  
+        z-index: 1000
+        @media (min-width: 560px) and (orientation: landscape)
+            left: 85%
+        @media (min-width: 750px) and (orientation: portrait)
+            left: 85%
+            top: 50px
+    &__nav--hamburger .hamburger-box
+        @media (min-width: 1024px) and (orientation: landscape)
+            display: none    
+        
+    &__aside
+        position: fixed
+        width: 100%
+        height: 100vh
+        left: -100%
+        background-color: #000
+        opacity: 0
+        transition: .5s
+        z-index: 999
+        &--active
+            left: 0
+            opacity: .95
+    &__logo
+        position: absolute
+        top: -50px
+        left: 50%
+        transform: translateX(-50%)
+        width: 280px
+        height: 300px
+        background-position: -15px center
+        background-size: contain
+        background-repeat: no-repeat
+        background-image: url(../img/LogoMenu.png)
+        @media (min-width: 750px) and (orientation: portrait)
+            width: 450px
+            height: 450px
+            background-position: -35px center
+        &-menumobile
+            @media (min-width: 560px) and (orientation: landscape)
+                top: 40%
+                left: 2vw
+                transform: translateX(0) translateY(-50%)
+        &-mobilelandscape
+            @media (min-width: 560px) and (orientation: landscape)
+                top: -15%
+                width: 180px
+                height: 200px
+            @media (min-width: 640px) and (orientation: landscape)
+                top: -10%
+        @media (min-width: 1024px) and (orientation: landscape)
+            position: absolute
+            left: 150px
+            top: 15px
+            width: 175px
+            height: 125px
+            background-position: center center
+            background-size: contain
+            background-repeat: no-repeat
+            background-image: url(../img/LogoMenu.png)
+    &__navmobile--box
+        position: absolute
+        top: 30%
+        left: 50%
+        transform: translateX(-50%)
+        width: 100%
+        text-align: center
+        line-height: 50px
+        @media (min-width: 750px) and (orientation: portrait)
+            line-height: 80px
+        @media (min-width: 560px) and (orientation: landscape)
+            top: 5vh
+            width: 50%
+            left: 65%
+        @media (min-width: 640px) and (orientation: landscape)
+            top: 10vh
+        &-element
+            @media (min-width: 750px) and (orientation: portrait)
+                font-size: 22px
+    &__navmobile--footer
+        position: relative
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        left: 50%
+        transform: translateX(-50%) translateY(90vh)
+        width: 200px
+        height: 50px
+        @media (min-width: 560px) and (orientation: landscape)
+            left: 8%
+            transform: translateY(70vh)
+        &-fb
+            background-image: url(../ico/fbico.png)    
+        &-in
+            background-image: url(../ico/inico.png)
+    &__navpc
+        display: none
+        position: absolute
+        left: 300px
+        top: 55px
+        height: 30px
+        width: 65%
+        @media (min-width: 1024px) and (orientation: landscape)
+            display: block
+        &--box
+            list-style: none
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            &-element
+                @media (min-width: 1024px) and (orientation: portrait)
+                    font-size: 12px
+                @media (min-width: 1024px) and (orientation: landscape)
+                    font-size: 1vw
+                @media (min-width: 1400px) and (orientation: landscape)
+                    font-size: 14px
+                
+    &__text
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: center
+        top: 30%
+        left: 50%
+        transform: translateX(-50%)
+        width: 90%
+        text-align: center
+        @media (min-width: 400px) and (orientation: portrait)
+            top: 35%
+        @media (min-width: 750px) and (orientation: portrait)
+            width: 75%
+        @media (min-width: 560px) and (orientation: landscape)
+            width: 70%
+        @media (min-width: 1024px) and (orientation: landscape)
+            left: 100px
+            transform: none
+            max-width: 800px
+            text-align: left
+            align-items: flex-start
+        @media (min-width: 1300px) and (orientation: landscape)
+            top: 25%
+        &--herotext
+            margin-bottom: 50px
+            @media (min-width: 360px) and (orientation: portrait)
+                margin-bottom: 75px
+            @media (min-height: 750px) and (orientation: portrait)
+                margin-bottom: 100px
+            @media (min-width: 560px) and (orientation: landscape)
+                margin-bottom: 20px
+            @media (min-width: 640px) and (orientation: landscape)
+                margin-bottom: 30px
+        &--herosecond
+            margin-bottom: 50px
+            @media (min-width: 360px) and (orientation: portrait)
+                margin-bottom: 75px 
+            @media (min-height: 750px) and (orientation: portrait)
+                margin-bottom: 100px  
+            @media (min-width: 560px) and (orientation: landscape)
+                margin-bottom: 20px
+            @media (min-width: 640px) and (orientation: landscape)
+                margin-bottom: 30px 
+.ich
+    position: relative
+    min-height: 100vh
+    width: 100%
+    background-color: #fff
