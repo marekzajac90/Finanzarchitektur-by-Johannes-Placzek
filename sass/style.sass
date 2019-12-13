@@ -24,9 +24,10 @@ h1
         font-size: 45px
         line-height: 90px
 h2
-    font-size: 55px
     font-weight: 300
     color: #AA8C41
+    font-size: 5vw
+    text-align: center
 h3
     font-size: 3vw
     line-height: 30px
@@ -42,6 +43,13 @@ h3
     @media (min-width: 1024px) and (orientation: landscape)
         font-size: 25px
         line-height: 60px
+p
+    font-size: 12px
+    line-height: 24px
+    letter-spacing: 1px
+    word-spacing: 2px
+    text-align: justify
+    color: #707070
 a 
     text-decoration: none 
     color: #AA8C41
@@ -57,7 +65,7 @@ a
     background-color: transparent
     border: 2px solid #AA8C41
     border-radius: 50px
-    width: 190px
+    width: 180px
     height: 50px
     color: #ffffff
     font-size: 16px
@@ -76,6 +84,10 @@ a
         width: 180px
         height: 45px
         font-size: 12px
+    @media (min-width: 1024px) and (orientation: landscape)
+        width: 200px
+        height: 60px
+        font-size: 16px
     &:hover
         background-color: #AA8C41
 .ico
@@ -128,7 +140,7 @@ a
         z-index: 999
         &--active
             left: 0
-            opacity: .95
+            opacity: .98
     &__logo
         position: absolute
         top: -50px
@@ -160,15 +172,6 @@ a
                 display: none
         @media (min-width: 1024px) and (orientation: landscape)
             display: none
-            // position: absolute
-            // left: 150px
-            // top: 15px
-            // width: 175px
-            // height: 125px
-            // background-position: center center
-            // background-size: contain
-            // background-repeat: no-repeat
-            // background-image: url(../img/LogoMenu.png)
     &__navmobile--box
         position: absolute
         top: 30%
@@ -276,6 +279,8 @@ a
                 margin-bottom: 20px
             @media (min-width: 640px) and (orientation: landscape)
                 margin-bottom: 30px
+            @media (min-width: 1024px) and (orientation: landscape)
+                margin-bottom: 80px
         &--herosecond
             margin-bottom: 50px
             @media (min-width: 360px) and (orientation: portrait)
@@ -286,8 +291,68 @@ a
                 margin-bottom: 20px
             @media (min-width: 640px) and (orientation: landscape)
                 margin-bottom: 30px 
+            @media (min-width: 1024px) and (orientation: landscape)
+                margin-bottom: 80px
 .ich
     position: relative
-    min-height: 200vh
     width: 100%
+    min-height: 100vh
     background-color: #fff
+    &__wrapper
+        width: 65%
+        margin: 0 auto
+        padding-top: 20px
+        &--heading
+            margin: 50px auto 70px
+        &--content
+            display: flex
+            flex-direction: column
+            align-items: center
+            &-rahmen
+                margin-bottom: 50px
+                width: 70vw
+                height: 70vw
+                max-width: 500px
+                max-height: 500px
+                padding: 5px
+                border: 2px solid #AA8C41
+                &__foto
+                    width: 98%
+                    height: 98%
+                    margin: 1% 0 0 1%
+                    background-image: url(../img/UeberMichFoto.jpg)
+                    background-size: cover
+                    background-position: center -35px
+                    background-repeat: no-repeat
+            &-promovideo
+                position: relative
+                margin: 50px auto
+                width: 100%
+                height: 40vw
+                background-color: #000
+                &::after
+                    position: absolute
+                    top: 50%
+                    left: 50%
+                    transform: translate(-50%, -50%)
+                    content: 'Video'
+                    color: #fff
+            &-kontakt
+                display: flex
+                flex-direction: column
+                align-items: center
+                &__text
+                    text-align: center
+                    margin-bottom: 50px
+                &__text-action
+                    text-align: center
+                    text-transform: uppercase
+                    font-weight: 700
+                    color: #AA8C41
+                    margin-bottom: 50px
+                &__button
+                    color: #707070
+                    margin-bottom: 50px
+                    &:hover
+                        color: #fff
+                    
