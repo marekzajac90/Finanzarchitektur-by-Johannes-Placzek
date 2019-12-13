@@ -44,7 +44,7 @@ h3
         line-height: 60px
 a 
     text-decoration: none 
-    color: #ffffff
+    color: #AA8C41
     text-transform: uppercase
     letter-spacing: 5px
     font-size: 16px
@@ -156,16 +156,19 @@ a
                 height: 200px
             @media (min-width: 640px) and (orientation: landscape)
                 top: -10%
+            @media (min-width: 1024px) and (orientation: landscape)
+                display: none
         @media (min-width: 1024px) and (orientation: landscape)
-            position: absolute
-            left: 150px
-            top: 15px
-            width: 175px
-            height: 125px
-            background-position: center center
-            background-size: contain
-            background-repeat: no-repeat
-            background-image: url(../img/LogoMenu.png)
+            display: none
+            // position: absolute
+            // left: 150px
+            // top: 15px
+            // width: 175px
+            // height: 125px
+            // background-position: center center
+            // background-size: contain
+            // background-repeat: no-repeat
+            // background-image: url(../img/LogoMenu.png)
     &__navmobile--box
         position: absolute
         top: 30%
@@ -203,23 +206,39 @@ a
             background-image: url(../ico/inico.png)
     &__navpc
         display: none
-        position: absolute
-        left: 300px
+        position: fixed
+        left: 70px
         top: 55px
         height: 30px
-        width: 65%
+        width: 85%
+        transition: top 400ms ease-in-out
+        z-index: 1000
         @media (min-width: 1024px) and (orientation: landscape)
-            display: block
+            display: flex
+            flex-direction: row
+            justify-content: space-between
+            align-items: center
+        &--up
+            top: -175px
+        &--logo
+            width: 175px
+            height: 125px
+            background-position: center center
+            background-size: contain
+            background-repeat: no-repeat
+            background-image: url(../img/LogoMenuBlack.png)
         &--box
             list-style: none
             display: flex
             justify-content: space-between
             flex-wrap: wrap
+            width: 80%
             &-element
                 @media (min-width: 1024px) and (orientation: portrait)
                     font-size: 12px
                 @media (min-width: 1024px) and (orientation: landscape)
                     font-size: 1vw
+                    font-weight: bold
                 @media (min-width: 1400px) and (orientation: landscape)
                     font-size: 14px
                 
@@ -269,6 +288,6 @@ a
                 margin-bottom: 30px 
 .ich
     position: relative
-    min-height: 100vh
+    min-height: 200vh
     width: 100%
     background-color: #fff

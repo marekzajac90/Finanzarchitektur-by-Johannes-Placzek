@@ -84,7 +84,7 @@ h3 {
 
 a {
   text-decoration: none;
-  color: #ffffff;
+  color: #AA8C41;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 16px;
@@ -261,16 +261,14 @@ a:hover {
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
+  .header__logo-mobilelandscape {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
   .header__logo {
-    position: absolute;
-    left: 150px;
-    top: 15px;
-    width: 175px;
-    height: 125px;
-    background-position: center center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(../img/LogoMenu.png);
+    display: none;
   }
 }
 
@@ -348,17 +346,45 @@ a:hover {
 
 .header__navpc {
   display: none;
-  position: absolute;
-  left: 300px;
+  position: fixed;
+  left: 70px;
   top: 55px;
   height: 30px;
-  width: 65%;
+  width: 85%;
+  -webkit-transition: top 400ms ease-in-out;
+  transition: top 400ms ease-in-out;
+  z-index: 1000;
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
   .header__navpc {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
+}
+
+.header__navpc--up {
+  top: -175px;
+}
+
+.header__navpc--logo {
+  width: 175px;
+  height: 125px;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../img/LogoMenuBlack.png);
 }
 
 .header__navpc--box {
@@ -371,6 +397,7 @@ a:hover {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 80%;
 }
 
 @media (min-width: 1024px) and (orientation: portrait) {
@@ -382,6 +409,7 @@ a:hover {
 @media (min-width: 1024px) and (orientation: landscape) {
   .header__navpc--box-element {
     font-size: 1vw;
+    font-weight: bold;
   }
 }
 
@@ -506,7 +534,7 @@ a:hover {
 
 .ich {
   position: relative;
-  min-height: 100vh;
+  min-height: 200vh;
   width: 100%;
   background-color: #fff;
 }

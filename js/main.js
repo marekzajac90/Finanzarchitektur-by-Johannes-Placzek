@@ -13,6 +13,39 @@ const link__angebot_pc = document.querySelector("#menu__link--angebot-pc")
 const link__kariere_pc = document.querySelector("#menu__link--kariere-pc")
 const link__kontakt_pc = document.querySelector("#menu__link--kontakt-pc")
 
+// Nawigacja pojawiajaca sie przy scrolowaniu zmienne
+var previousScrollTop;
+var isScrolling;
+var nav = document.querySelector('.header__navpc');
+
+// Nawigacja przy scrolowaniu kod
+function hasScrolled() {
+  
+    var scrollTop = window.scrollY;
+    
+    if (scrollTop > previousScrollTop){
+      nav.classList.add('header__navpc--up');
+    } else {
+      nav.classList.remove('header__navpc--up');
+    }
+      
+    previousScrollTop = scrollTop;
+    
+  }
+
+  document.addEventListener('scroll', function() {
+    isScrolling = true;
+  }, false);
+  
+  setInterval(function() {
+    if (isScrolling) {
+      hasScrolled();
+      isScrolling = false;
+    }
+  }, 100);
+
+// Hamburger menu
+
 $(hamburger).on('click', function () {
     $(hamburger).toggleClass("is-active")
     $(aside).toggleClass("header__aside--active")
