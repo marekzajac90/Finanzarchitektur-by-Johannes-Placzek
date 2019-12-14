@@ -1,11 +1,13 @@
 const hamburger = document.querySelector(".header__nav--hamburger-js")
 const aside = document.querySelector(".header__aside")
+
 const link__startseite = document.querySelector("#menu__link--startseite")
 const link__übermich = document.querySelector("#menu__link--über-mich")
 const link__leistungen = document.querySelector("#menu__link--leistungen")
 const link__angebot = document.querySelector("#menu__link--angebot")
 const link__kariere = document.querySelector("#menu__link--kariere")
 const link__kontakt = document.querySelector("#menu__link--kontakt")
+
 const link__startseite_pc = document.querySelector("#menu__link--startseite-pc")
 const link__übermich_pc = document.querySelector("#menu__link--über-mich-pc")
 const link__leistungen_pc = document.querySelector("#menu__link--leistungen-pc")
@@ -13,10 +15,17 @@ const link__angebot_pc = document.querySelector("#menu__link--angebot-pc")
 const link__kariere_pc = document.querySelector("#menu__link--kariere-pc")
 const link__kontakt_pc = document.querySelector("#menu__link--kontakt-pc")
 
+const link__startseite_pc_float = document.querySelector("#menu__link--startseite-pc-float")
+const link__übermich_pc_float = document.querySelector("#menu__link--über-mich-pc-float")
+const link__leistungen_pc_float = document.querySelector("#menu__link--leistungen-pc-float")
+const link__angebot_pc_float = document.querySelector("#menu__link--angebot-pc-float")
+const link__kariere_pc_float = document.querySelector("#menu__link--kariere-pc-float")
+const link__kontakt_pc_float = document.querySelector("#menu__link--kontakt-pc-float")
+
 // Nawigacja pojawiajaca sie przy scrolowaniu zmienne
 var previousScrollTop;
 var isScrolling;
-var nav = document.querySelector('.header__navpc');
+var nav = document.querySelector('.active');
 
 // Nawigacja przy scrolowaniu kod
 function hasScrolled() {
@@ -24,9 +33,9 @@ function hasScrolled() {
     var scrollTop = window.scrollY;
     
     if (scrollTop > previousScrollTop){
-      nav.classList.add('header__navpc--up');
+      nav.classList.add('active--up');
     } else {
-      nav.classList.remove('header__navpc--up');
+      nav.classList.remove('active--up');
     }
       
     previousScrollTop = scrollTop;
@@ -42,7 +51,19 @@ function hasScrolled() {
       hasScrolled();
       isScrolling = false;
     }
-  }, 100);
+  }, 300);
+
+
+// float menu
+
+function floatmenu() {
+    if ($(window).scrollTop() > 1000) {
+        $('.header__navpcbgc').addClass('active');
+    } else {
+        $('.header__navpcbgc').removeClass('active');
+    }
+}
+setInterval(floatmenu, 5);
 
 // Hamburger menu
 
@@ -69,28 +90,28 @@ $(link__übermich).on('click', function() {
 });
 $(link__leistungen).on('click', function() {
     $('html, body').animate({
-        scrollTop: $('#price').offset().top
+        scrollTop: $('#leistungen').offset().top
     }, 800);
     $(aside).removeClass("header__aside--active")
     $(hamburger).removeClass("is-active") 
 });
 $(link__angebot).on('click', function() {
     $('html, body').animate({
-        scrollTop: $('#about').offset().top
+        scrollTop: $('#angebot').offset().top
     }, 800);
     $(aside).removeClass("header__aside--active")
     $(hamburger).removeClass("is-active")
 });
 $(link__kariere).on('click', function() {
     $('html, body').animate({
-        scrollTop: $('#about').offset().top
+        scrollTop: $('#kariere').offset().top
     }, 800);
     $(aside).removeClass("header__aside--active")
     $(hamburger).removeClass("is-active")
 });
 $(link__kontakt).on('click', function() {
     $('html, body').animate({
-        scrollTop: $('#about').offset().top
+        scrollTop: $('#kontakt').offset().top
     }, 800);
     $(aside).removeClass("header__aside--active")
     $(hamburger).removeClass("is-active")
@@ -115,28 +136,74 @@ $(link__übermich_pc).on('click', function() {
 });
 $(link__leistungen_pc).on('click', function() {
     $('html, body').animate({
-        scrollTop: $('#price').offset().top
+        scrollTop: $('#leistungen').offset().top
     }, 800);
     $(aside).removeClass("header__aside--active")
     $(hamburger).removeClass("is-active") 
 });
 $(link__angebot_pc).on('click', function() {
     $('html, body').animate({
-        scrollTop: $('#about').offset().top
+        scrollTop: $('#angebot').offset().top
     }, 800);
     $(aside).removeClass("header__aside--active")
     $(hamburger).removeClass("is-active")
 });
 $(link__kariere_pc).on('click', function() {
     $('html, body').animate({
-        scrollTop: $('#about').offset().top
+        scrollTop: $('#kariere').offset().top
     }, 800);
     $(aside).removeClass("header__aside--active")
     $(hamburger).removeClass("is-active")
 });
 $(link__kontakt_pc).on('click', function() {
     $('html, body').animate({
-        scrollTop: $('#about').offset().top
+        scrollTop: $('#kontakt').offset().top
+    }, 800);
+    $(aside).removeClass("header__aside--active")
+    $(hamburger).removeClass("is-active")
+});
+
+
+// Menu PC float active
+
+$(link__startseite_pc_float).on('click', function() {
+    $('html, body').animate({
+        scrollTop: $('#header').offset().top
+    }, 800);
+    $(aside).removeClass("header__aside--active")
+    $(hamburger).removeClass("is-active")
+});
+$(link__übermich_pc_float).on('click', function() {
+    $('html, body').animate({
+        scrollTop: $('#über-mich').offset().top
+    }, 800);
+    $(aside).removeClass("header__aside--active")
+    $(hamburger).removeClass("is-active")
+});
+$(link__leistungen_pc_float).on('click', function() {
+    $('html, body').animate({
+        scrollTop: $('#leistungen').offset().top
+    }, 800);
+    $(aside).removeClass("header__aside--active")
+    $(hamburger).removeClass("is-active") 
+});
+$(link__angebot_pc_float).on('click', function() {
+    $('html, body').animate({
+        scrollTop: $('#angebot').offset().top
+    }, 800);
+    $(aside).removeClass("header__aside--active")
+    $(hamburger).removeClass("is-active")
+});
+$(link__kariere_pc_float).on('click', function() {
+    $('html, body').animate({
+        scrollTop: $('#kariere').offset().top
+    }, 800);
+    $(aside).removeClass("header__aside--active")
+    $(hamburger).removeClass("is-active")
+});
+$(link__kontakt_pc_float).on('click', function() {
+    $('html, body').animate({
+        scrollTop: $('#kontakt').offset().top
     }, 800);
     $(aside).removeClass("header__aside--active")
     $(hamburger).removeClass("is-active")

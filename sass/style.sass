@@ -28,6 +28,8 @@ h2
     color: #AA8C41
     font-size: 5vw
     text-align: center
+    @media (min-width: 1024px) and (orientation: landscape)
+        font-size: 35px
 h3
     font-size: 3vw
     line-height: 30px
@@ -209,20 +211,17 @@ a
             background-image: url(../ico/inico.png)
     &__navpc
         display: none
-        position: fixed
-        left: 70px
-        top: 55px
-        height: 30px
-        width: 85%
-        transition: top 400ms ease-in-out
-        z-index: 1000
         @media (min-width: 1024px) and (orientation: landscape)
             display: flex
             flex-direction: row
             justify-content: space-between
             align-items: center
-        &--up
-            top: -175px
+            position: relative
+            left: 70px
+            top: 55px
+            height: 30px
+            width: 85%
+            z-index: 1000
         &--logo
             width: 175px
             height: 125px
@@ -244,7 +243,55 @@ a
                     font-weight: bold
                 @media (min-width: 1400px) and (orientation: landscape)
                     font-size: 14px
-                
+    &__navpcbgc
+        display: none
+        @media (min-width: 1024px) and (orientation: landscape)
+            &.active
+                display: block
+                position: fixed
+                top: 0
+                width: 100vw
+                height: 80px
+                background-color: #fff
+                z-index: 1000
+                -webkit-box-shadow: 0px 37px 48px -26px rgba(0,0,0,0.43)
+                -moz-box-shadow: 0px 37px 48px -26px rgba(0,0,0,0.43)
+                box-shadow: 0px 37px 48px -26px rgba(0,0,0,0.43)
+                transition: top 400ms ease-in-out
+                &--up
+                    top: -80px
+            &--wrapper
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                display: flex
+                flex-direction: row
+                justify-content: space-around
+                align-items: center
+                width: 85%
+                height: 80px
+                &--logo
+                    width: 175px
+                    height: 80px
+                    background-position: center center
+                    background-size: contain
+                    background-repeat: no-repeat
+                    background-image: url(../img/LogoMenuBlack.png)
+                &--box
+                    list-style: none
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    flex-wrap: wrap
+                    width: 80%
+                    &-element
+                        @media (min-width: 1024px) and (orientation: portrait)
+                            font-size: 12px
+                        @media (min-width: 1024px) and (orientation: landscape)
+                            font-size: 1vw
+                            font-weight: bold
+                        @media (min-width: 1200px) and (orientation: landscape)
+                            font-size: 12px
     &__text
         position: relative
         display: flex
@@ -263,6 +310,7 @@ a
             width: 70%
         @media (min-width: 1024px) and (orientation: landscape)
             left: 100px
+            top: 22%
             transform: none
             max-width: 800px
             text-align: left
@@ -308,14 +356,30 @@ a
             display: flex
             flex-direction: column
             align-items: center
+            @media (min-width: 1024px) and (orientation: landscape)
+                flex-direction: row
+                align-items: stretch
             &-rahmen
                 margin-bottom: 50px
                 width: 70vw
                 height: 70vw
-                max-width: 500px
-                max-height: 500px
+                max-width: 300px
+                max-height: 300px
                 padding: 5px
                 border: 2px solid #AA8C41
+                @media (min-width: 360px) and (orientation: portrait)
+                    width: 50vw
+                    height: 50vw
+                @media (min-width: 560px) and (orientation: landscape)
+                    width: 40vw
+                    height: 40vw
+                @media (min-width: 640px) and (orientation: landscape)
+                    width: 40vw
+                    height: 40vw
+                @media (min-width: 1024px) and (orientation: landscape)
+                    width: 300vw    
+                    height: 300vw   
+                    margin-right: 100px
                 &__foto
                     width: 98%
                     height: 98%
@@ -324,12 +388,18 @@ a
                     background-size: cover
                     background-position: center -35px
                     background-repeat: no-repeat
+                &-ueber
+                    @media (min-width: 1024px) and (orientation: landscape)
+                        margin-left: 300px
             &-promovideo
                 position: relative
                 margin: 50px auto
                 width: 100%
                 height: 40vw
                 background-color: #000
+                @media (min-width: 1024px) and (orientation: landscape)
+                    height: 20vw
+                    width: 75%
                 &::after
                     position: absolute
                     top: 50%
@@ -353,6 +423,53 @@ a
                 &__button
                     color: #707070
                     margin-bottom: 50px
+                    @media (min-width: 760px) and (orientation: portrait)
+                        margin-bottom: 150px
+                    @media (min-width: 1024px) and (orientation: landscape)
+                        margin-bottom: 150px
                     &:hover
                         color: #fff
-                    
+.break__logo
+    position: relative
+    width: 100%
+    height: 40vh
+    background-image: url(../img/teksture.jpg)
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    background-attachment: fixed
+    @media (min-width: 360px) and (orientation: portrait)
+        height: 50vh
+    @media (min-width: 760px) and (orientation: portrait)
+        height: 40vh
+    @media (min-width: 560px) and (orientation: landscape)
+        height: 70vh
+    &::after
+        position: absolute
+        content: ''
+        display: block
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(0, 0, 0, .5)
+    &::before
+        position: absolute
+        content: ''
+        width: 100%
+        height: 100%
+        background-image: url(../img/LogoMenu.png)
+        background-size: contain
+        background-position: -20px center
+        background-repeat: no-repeat
+        z-index: 1
+        background-attachment: fixed
+        @media (min-width: 760px) and (orientation: portrait)
+            background-position: -60px center
+        @media (min-width: 1024px) and (orientation: landscape)
+            background-position: -80px center
+.leistung
+    position: relative
+    width: 100%
+    height: 100vh
+    background-color: #000
