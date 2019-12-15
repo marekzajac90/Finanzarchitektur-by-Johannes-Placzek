@@ -28,6 +28,8 @@ h2
     color: #AA8C41
     font-size: 5vw
     text-align: center
+    @media (min-width: 660px) and (orientation: landscape)
+        font-size: 30px
     @media (min-width: 1024px) and (orientation: landscape)
         font-size: 35px
 h3
@@ -98,6 +100,26 @@ a
     background-position: center center
     background-size: cover
     background-repeat: no-repeat
+.wrapper
+    width: 70%
+    margin: 0 auto
+    padding-top: 20px
+.break
+    position: relative
+    width: 100%
+    height: 40vh
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+    background-attachment: fixed
+    @media (min-width: 360px) and (orientation: portrait)
+        height: 50vh
+    @media (min-width: 760px) and (orientation: portrait)
+        height: 40vh
+    @media (min-width: 560px) and (orientation: landscape)
+        height: 70vh
+.heading
+    margin: 50px auto 70px
 .fsvideo
     position: fixed
     top: 0
@@ -347,11 +369,6 @@ a
     min-height: 100vh
     background-color: #fff
     &__wrapper
-        width: 65%
-        margin: 0 auto
-        padding-top: 20px
-        &--heading
-            margin: 50px auto 70px
         &--content
             display: flex
             flex-direction: column
@@ -377,8 +394,8 @@ a
                     width: 40vw
                     height: 40vw
                 @media (min-width: 1024px) and (orientation: landscape)
-                    width: 300vw    
-                    height: 300vw   
+                    width: 400vw    
+                    height: 30vw   
                     margin-right: 100px
                 &__foto
                     width: 98%
@@ -430,24 +447,11 @@ a
                     &:hover
                         color: #fff
 .break__logo
-    position: relative
-    width: 100%
-    height: 40vh
     background-image: url(../img/teksture.jpg)
-    background-position: center center
-    background-repeat: no-repeat
-    background-size: cover
-    background-attachment: fixed
-    @media (min-width: 360px) and (orientation: portrait)
-        height: 50vh
-    @media (min-width: 760px) and (orientation: portrait)
-        height: 40vh
-    @media (min-width: 560px) and (orientation: landscape)
-        height: 70vh
+    // Photo by Mockaroon on Unsplash
     &::after
         position: absolute
         content: ''
-        display: block
         top: 0
         left: 0
         width: 100%
@@ -465,11 +469,147 @@ a
         z-index: 1
         background-attachment: fixed
         @media (min-width: 760px) and (orientation: portrait)
-            background-position: -60px center
+            background-position: 30% center
+            background-size: 550px 350px
+        @media (min-width: 560px) and (orientation: landscape)
+            background-size: 400px 250px
+            background-position: 35% center
+        @media (min-width: 730px) and (orientation: landscape)
+            background-position: 40% center
         @media (min-width: 1024px) and (orientation: landscape)
-            background-position: -80px center
+            background-size: 600px 400px
+        @media (min-width: 1300px) and (orientation: landscape)
+            background-size: 750px 500px
+            background-position: 45% center
 .leistung
     position: relative
     width: 100%
-    height: 100vh
-    background-color: #000
+    background-color: #fff
+    &__wrapper
+        @media (min-width: 660px) and (orientation: landscape)
+            padding-top: 50px
+        &--heading
+            @media (min-width: 660px) and (orientation: landscape)
+                width: 90%
+                max-width: 600px
+        &--text
+            text-align: center
+            margin-bottom: 80px
+            @media (min-width: 660px) and (orientation: landscape)
+                width: 90%
+                max-width: 600px
+                margin: 0 auto 100px
+        &--elemente
+            display: flex
+            flex-direction: column
+            margin: 0 auto
+            width: 100%
+            max-width: 950px
+            align-items: center
+            padding-bottom: 100px
+            @media (min-width: 560px) and (orientation: landscape)
+                flex-direction: row
+                flex-wrap: wrap
+            @media (min-height: 1024px) and (orientation: portrait)
+                flex-direction: row
+                flex-wrap: wrap
+            &-element
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 200px
+                height: 45px
+                margin: 0 auto 20px
+                border: 2px solid #AA8C41
+                border-radius: 50px
+                @media (min-width: 560px) and (orientation: landscape)
+                    width: 170px
+                    margin: 0 auto 30px
+                @media (min-width: 730px) and (orientation: landscape)
+                    width: 220px
+                    height: 50px
+                @media (min-height: 1024px) and (orientation: portrait)
+                    width: 220px
+                    height: 50px
+                &__text
+                    text-align: center
+                    @media (min-width: 560px) and (orientation: landscape)
+                        font-size: 10px
+                    @media (min-width: 730px) and (orientation: landscape)
+                        font-size: 12px
+.break__philosophie
+    position: relative
+    height: 170vh
+    @media (min-width: 360px) and (orientation: portrait)
+        height: 130vh
+    @media (min-width: 360px) and (orientation: portrait) and (min-height: 810px)
+        height: 100vh
+    @media (min-width: 410px) and (orientation: portrait)
+        height: 105vh
+    @media (min-width: 760px) and (orientation: portrait)
+        height: 55vh
+    @media (min-width: 1024px) and (orientation: portrait)
+        height: 40vh
+    @media (min-width: 560px) and (orientation: landscape)
+        height: 170vh
+    @media (min-width: 640px) and (orientation: landscape)
+        height: 145vh
+    @media (min-width: 730px) and (orientation: landscape)
+        height: 135vh
+    @media (min-width: 1024px) and (orientation: landscape)
+        height: 60vh
+    @media (min-width: 1200px) and (orientation: landscape)
+        height: 50vh
+    &--bg
+        height: 170vh
+        width: 100%
+        position: absolute
+        background-image: url(../img/mountin2.jpg)
+        // Photo by Rohit Tandon on Unsplash
+            @media (min-width: 360px) and (orientation: portrait)
+                height: 130vh
+            @media (min-width: 410px) and (orientation: portrait)
+                height: 105vh
+            @media (min-width: 760px) and (orientation: portrait)
+                height: 55vh
+            @media (min-width: 1024px) and (orientation: portrait)
+                height: 40vh
+            @media (min-width: 560px) and (orientation: landscape)
+                height: 170vh
+            @media (min-width: 640px) and (orientation: landscape)
+                height: 145vh
+            @media (min-width: 730px) and (orientation: landscape)
+                height: 135vh
+            @media (min-width: 1024px) and (orientation: landscape)
+                height: 60vh
+            @media (min-width: 1200px) and (orientation: landscape)
+                height: 50vh
+        &::after
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(255, 255, 255, .8)
+    &--wrapper
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        padding-top: 100px
+        @media (min-width: 560px) and (orientation: landscape)
+            padding-top: 50px
+        @media (min-width: 660px) and (orientation: landscape)
+            padding-top: 80px
+        &-heading
+            margin-bottom: 50px
+            @media (min-width: 560px) and (orientation: landscape)
+                margin-bottom: 30px
+            @media (min-width: 660px) and (orientation: landscape)
+                margin-bottom: 50px
+
+.angebot
+    position: relative
+    min-height: 100vh
+    width: 100%
+    background-color: #fff

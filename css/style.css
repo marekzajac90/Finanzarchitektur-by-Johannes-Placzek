@@ -50,6 +50,12 @@ h2 {
   text-align: center;
 }
 
+@media (min-width: 660px) and (orientation: landscape) {
+  h2 {
+    font-size: 30px;
+  }
+}
+
 @media (min-width: 1024px) and (orientation: landscape) {
   h2 {
     font-size: 35px;
@@ -168,6 +174,44 @@ a:hover {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.wrapper {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.break {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (min-width: 360px) and (orientation: portrait) {
+  .break {
+    height: 50vh;
+  }
+}
+
+@media (min-width: 760px) and (orientation: portrait) {
+  .break {
+    height: 40vh;
+  }
+}
+
+@media (min-width: 560px) and (orientation: landscape) {
+  .break {
+    height: 70vh;
+  }
+}
+
+.heading {
+  margin: 50px auto 70px;
 }
 
 .fsvideo {
@@ -656,16 +700,6 @@ a:hover {
   background-color: #fff;
 }
 
-.ich__wrapper {
-  width: 65%;
-  margin: 0 auto;
-  padding-top: 20px;
-}
-
-.ich__wrapper--heading {
-  margin: 50px auto 70px;
-}
-
 .ich__wrapper--content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -724,8 +758,8 @@ a:hover {
 
 @media (min-width: 1024px) and (orientation: landscape) {
   .ich__wrapper--content-rahmen {
-    width: 300vw;
-    height: 300vw;
+    width: 400vw;
+    height: 30vw;
     margin-right: 100px;
   }
 }
@@ -819,38 +853,12 @@ a:hover {
 }
 
 .break__logo {
-  position: relative;
-  width: 100%;
-  height: 40vh;
   background-image: url(../img/teksture.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-}
-
-@media (min-width: 360px) and (orientation: portrait) {
-  .break__logo {
-    height: 50vh;
-  }
-}
-
-@media (min-width: 760px) and (orientation: portrait) {
-  .break__logo {
-    height: 40vh;
-  }
-}
-
-@media (min-width: 560px) and (orientation: landscape) {
-  .break__logo {
-    height: 70vh;
-  }
 }
 
 .break__logo::after {
   position: absolute;
   content: '';
-  display: block;
   top: 0;
   left: 0;
   width: 100%;
@@ -873,20 +881,284 @@ a:hover {
 
 @media (min-width: 760px) and (orientation: portrait) {
   .break__logo::before {
-    background-position: -60px center;
+    background-position: 30% center;
+    background-size: 550px 350px;
+  }
+}
+
+@media (min-width: 560px) and (orientation: landscape) {
+  .break__logo::before {
+    background-size: 400px 250px;
+    background-position: 35% center;
+  }
+}
+
+@media (min-width: 730px) and (orientation: landscape) {
+  .break__logo::before {
+    background-position: 40% center;
   }
 }
 
 @media (min-width: 1024px) and (orientation: landscape) {
   .break__logo::before {
-    background-position: -80px center;
+    background-size: 600px 400px;
+  }
+}
+
+@media (min-width: 1300px) and (orientation: landscape) {
+  .break__logo::before {
+    background-size: 750px 500px;
+    background-position: 45% center;
   }
 }
 
 .leistung {
   position: relative;
   width: 100%;
-  height: 100vh;
-  background-color: #000;
+  background-color: #fff;
+}
+
+@media (min-width: 660px) and (orientation: landscape) {
+  .leistung__wrapper {
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 660px) and (orientation: landscape) {
+  .leistung__wrapper--heading {
+    width: 90%;
+    max-width: 600px;
+  }
+}
+
+.leistung__wrapper--text {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+@media (min-width: 660px) and (orientation: landscape) {
+  .leistung__wrapper--text {
+    width: 90%;
+    max-width: 600px;
+    margin: 0 auto 100px;
+  }
+}
+
+.leistung__wrapper--elemente {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 950px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 100px;
+}
+
+@media (min-width: 560px) and (orientation: landscape) {
+  .leistung__wrapper--elemente {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-height: 1024px) and (orientation: portrait) {
+  .leistung__wrapper--elemente {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.leistung__wrapper--elemente-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 45px;
+  margin: 0 auto 20px;
+  border: 2px solid #AA8C41;
+  border-radius: 50px;
+}
+
+@media (min-width: 560px) and (orientation: landscape) {
+  .leistung__wrapper--elemente-element {
+    width: 170px;
+    margin: 0 auto 30px;
+  }
+}
+
+@media (min-width: 730px) and (orientation: landscape) {
+  .leistung__wrapper--elemente-element {
+    width: 220px;
+    height: 50px;
+  }
+}
+
+@media (min-height: 1024px) and (orientation: portrait) {
+  .leistung__wrapper--elemente-element {
+    width: 220px;
+    height: 50px;
+  }
+}
+
+.leistung__wrapper--elemente-element__text {
+  text-align: center;
+}
+
+@media (min-width: 560px) and (orientation: landscape) {
+  .leistung__wrapper--elemente-element__text {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 730px) and (orientation: landscape) {
+  .leistung__wrapper--elemente-element__text {
+    font-size: 12px;
+  }
+}
+
+.break__philosophie {
+  position: relative;
+  height: 170vh;
+}
+
+@media (min-width: 360px) and (orientation: portrait) {
+  .break__philosophie {
+    height: 130vh;
+  }
+}
+
+@media (min-width: 360px) and (orientation: portrait) and (min-height: 810px) {
+  .break__philosophie {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 410px) and (orientation: portrait) {
+  .break__philosophie {
+    height: 105vh;
+  }
+}
+
+@media (min-width: 760px) and (orientation: portrait) {
+  .break__philosophie {
+    height: 55vh;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: portrait) {
+  .break__philosophie {
+    height: 40vh;
+  }
+}
+
+@media (min-width: 560px) and (orientation: landscape) {
+  .break__philosophie {
+    height: 170vh;
+  }
+}
+
+@media (min-width: 640px) and (orientation: landscape) {
+  .break__philosophie {
+    height: 145vh;
+  }
+}
+
+@media (min-width: 730px) and (orientation: landscape) {
+  .break__philosophie {
+    height: 135vh;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .break__philosophie {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 1200px) and (orientation: landscape) {
+  .break__philosophie {
+    height: 50vh;
+  }
+}
+
+.break__philosophie--bg {
+  height: 170vh;
+  width: 100%;
+  position: absolute;
+  background-image: url(../img/mountin2.jpg);
+}
+
+.break__philosophie--bg::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.break__philosophie--wrapper {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding-top: 100px;
+}
+
+@media (min-width: 560px) and (orientation: landscape) {
+  .break__philosophie--wrapper {
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 660px) and (orientation: landscape) {
+  .break__philosophie--wrapper {
+    padding-top: 80px;
+  }
+}
+
+.break__philosophie--wrapper-heading {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 560px) and (orientation: landscape) {
+  .break__philosophie--wrapper-heading {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 660px) and (orientation: landscape) {
+  .break__philosophie--wrapper-heading {
+    margin-bottom: 50px;
+  }
+}
+
+.angebot {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #fff;
 }
 /*# sourceMappingURL=style.css.map */
