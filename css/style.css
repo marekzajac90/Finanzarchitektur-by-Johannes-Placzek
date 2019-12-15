@@ -119,6 +119,11 @@ a:hover {
   border-bottom: 2px solid #AA8C41;
 }
 
+span {
+  color: #AA8C41;
+  font-weight: 700;
+}
+
 .button {
   background-color: transparent;
   border: 2px solid #AA8C41;
@@ -886,6 +891,12 @@ a:hover {
   }
 }
 
+@media (min-width: 1024px) and (orientation: portrait) {
+  .break__logo::before {
+    background-position: 40% center;
+  }
+}
+
 @media (min-width: 560px) and (orientation: landscape) {
   .break__logo::before {
     background-size: 400px 250px;
@@ -1160,5 +1171,150 @@ a:hover {
   min-height: 100vh;
   width: 100%;
   background-color: #fff;
+}
+
+.angebot__wrapper {
+  padding-top: 50px;
+}
+
+.angebot__wrapper--heading {
+  margin-bottom: 50px;
+}
+
+.angebot__wrapper--text {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+@media (min-width: 760px) and (orientation: portrait) {
+  .angebot__wrapper--text {
+    margin-bottom: 100px;
+  }
+}
+
+.angebot__wrapper--elementeMobile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 50px;
+}
+
+@media (min-width: 560px) and (orientation: landscape) {
+  .angebot__wrapper--elementeMobile {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 760px) and (orientation: portrait) {
+  .angebot__wrapper--elementeMobile {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.angebot__wrapper--elementeMobile__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 560px) and (orientation: landscape) {
+  .angebot__wrapper--elementeMobile__element {
+    width: 40%;
+  }
+}
+
+@media (min-width: 760px) and (orientation: portrait) {
+  .angebot__wrapper--elementeMobile__element {
+    width: 40%;
+  }
+}
+
+.angebot__wrapper--elementeMobile__element-symbol {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 160px;
+  height: 160px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #AA8C41;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+.angebot__wrapper--elementeMobile__element-symbol__ico {
+  position: absolute;
+  top: 15px;
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.angebot__wrapper--elementeMobile__element-symbol__text {
+  position: absolute;
+  top: 100px;
+}
+
+.angebot__wrapper--elementeMobile__element-description {
+  text-align: center;
+}
+
+.analyse__ico {
+  background-image: url(../ico/angebot/1analyse.png);
+}
+
+.planung__ico {
+  background-image: url(../ico/angebot/2path.png);
+}
+
+.beratung__ico {
+  background-image: url(../ico/angebot/3discuss.png);
+}
+
+.umsetzung__ico {
+  background-image: url(../ico/angebot/4implementation.png);
+}
+
+.partnerschaft__ico {
+  background-image: url(../ico/angebot/5partnerschip.png);
+}
+
+.kontakt {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F8F8F8;
 }
 /*# sourceMappingURL=style.css.map */
