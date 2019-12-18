@@ -52,8 +52,10 @@ p
     line-height: 24px
     letter-spacing: 1px
     word-spacing: 2px
-    text-align: justify
+    text-align: left
     color: #707070
+    @media (min-width: 1024px) and (orientation: landscape)
+        text-align: center
 a 
     text-decoration: none 
     color: #AA8C41
@@ -103,8 +105,19 @@ span
     background-position: center center
     background-size: cover
     background-repeat: no-repeat
+.analyse__ico
+    background-image: url(../ico/angebot/1analyse.png)
+.planung__ico
+    background-image: url(../ico/angebot/2path.png)
+.beratung__ico
+    background-image: url(../ico/angebot/3discuss.png)
+.umsetzung__ico
+    background-image: url(../ico/angebot/4implementation.png)
+.partnerschaft__ico
+    background-image: url(../ico/angebot/5partnerschip.png) 
 .wrapper
     width: 70%
+    max-width: 1300px
     margin: 0 auto
     padding-top: 20px
 .break
@@ -406,7 +419,7 @@ span
                     margin: 1% 0 0 1%
                     background-image: url(../img/UeberMichFoto.jpg)
                     background-size: cover
-                    background-position: center -35px
+                    background-position: center -25px
                     background-repeat: no-repeat
                 &-ueber
                     @media (min-width: 1024px) and (orientation: landscape)
@@ -606,6 +619,10 @@ span
             padding-top: 50px
         @media (min-width: 660px) and (orientation: landscape)
             padding-top: 80px
+        @media (min-width: 1300px) and (orientation: landscape)
+            width: 50%
+            &-text
+                line-height: 30px
         &-heading
             margin-bottom: 50px
             @media (min-width: 560px) and (orientation: landscape)
@@ -623,10 +640,12 @@ span
         &--heading
             margin-bottom: 50px
         &--text
-            margin-bottom: 50px
+            padding-bottom: 50px
             text-align: center
+            max-width: 70%
+            margin: 0 auto
             @media (min-width: 760px) and (orientation: portrait)
-                margin-bottom: 100px
+                padding-bottom: 100px
         &--elementeMobile
             display: flex
             flex-direction: column
@@ -637,6 +656,8 @@ span
             @media (min-width: 760px) and (orientation: portrait)
                 flex-direction: row
                 flex-wrap: wrap
+            @media (min-width: 1024px) and (orientation: landscape)
+                display: none
             &__element
                 display: flex
                 flex-direction: column
@@ -671,16 +692,202 @@ span
                         top: 100px
                 &-description
                     text-align: center
-.analyse__ico
-    background-image: url(../ico/angebot/1analyse.png)
-.planung__ico
-    background-image: url(../ico/angebot/2path.png)
-.beratung__ico
-    background-image: url(../ico/angebot/3discuss.png)
-.umsetzung__ico
-    background-image: url(../ico/angebot/4implementation.png)
-.partnerschaft__ico
-    background-image: url(../ico/angebot/5partnerschip.png)    
+        &--elementePc
+            display: none
+            @media (min-width: 1024px) and (orientation: landscape)
+                display: block
+                display: flex
+                flex-direction: column
+                max-width: 815px
+                margin: 0 auto
+                &-linieA
+                    margin: 0 auto
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    &--elementA
+                        position: relative
+                        display: flex
+                        flex-direction: column
+                        width: 160px
+                        height: 160px
+                        align-items: center
+                        border: 2px solid #AA8C41
+                        border-radius: 50%
+                        margin-bottom: 100px
+                        transition: .3s
+                        &:hover
+                            background-color: #AA8C41
+                        &:hover > .analyse__ico
+                            background-image: url(../ico/angebot/1analyseWhite.png)
+                        &:hover > .angebot__wrapper--elementePc-linieA--elementA-text > p
+                            color: #fff
+                        &-symbol__ico
+                            position: absolute
+                            top: 15px
+                            width: 70px
+                            height: 70px
+                            background-size: contain
+                            background-repeat: no-repeat
+                            background-position: center center
+                        &-text
+                            position: absolute
+                            top: 100px
+                &-linieB
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    &--elementA
+                        position: relative
+                        display: flex
+                        flex-direction: column
+                        width: 160px
+                        height: 160px
+                        align-items: center
+                        border: 2px solid #AA8C41
+                        border-radius: 50%
+                        margin-bottom: 100px
+                        transition: .3s
+                        &:hover
+                            background-color: #AA8C41
+                        &:hover > .partnerschaft__ico
+                            background-image: url(../ico/angebot/5partnerschipWhite.png)
+                        &:hover > .angebot__wrapper--elementePc-linieB--elementA-text > p
+                            color: #fff
+                        &:hover .angebot__wrapper--elementePc-linieB-elementB--text5
+                            opacity: 1
+                        &-symbol__ico
+                            position: absolute
+                            top: 15px
+                            width: 70px
+                            height: 70px
+                            background-size: contain
+                            background-repeat: no-repeat
+                            background-position: center center
+                        &-text
+                            position: absolute
+                            top: 100px
+                    &-elementB
+                        display: flex
+                        flex-direction: column
+                        position: relative
+                        align-items: center
+                        justify-content: space-between
+                        width: 30%
+                        height: 130px  
+                        &--text1
+                            position: absolute
+                            opacity: 1
+                            &-title
+                                text-align: center
+                                color: #AA8C41
+                                font-weight: 700
+                                margin-bottom: 25px
+                            &-text
+                                text-align: center
+                        &--text5
+                            position: absolute
+                            opacity: 0
+                            &-title
+                                text-align: center
+                                color: #AA8C41
+                                font-weight: 700
+                                margin-bottom: 25px
+                            &-text
+                                text-align: center
+
+                    &--elementC
+                        position: relative
+                        display: flex
+                        flex-direction: column
+                        width: 160px
+                        height: 160px
+                        align-items: center
+                        border: 2px solid #AA8C41
+                        border-radius: 50%
+                        margin-bottom: 100px
+                        transition: .3s
+                        &:hover
+                            background-color: #AA8C41
+                        &:hover > .planung__ico
+                            background-image: url(../ico/angebot/2pathWhite.png)
+                        &:hover > .angebot__wrapper--elementePc-linieB--elementC-text > p
+                            color: #fff
+                        &-symbol__ico
+                            position: absolute
+                            top: 15px
+                            width: 70px
+                            height: 70px
+                            background-size: contain
+                            background-repeat: no-repeat
+                            background-position: center center
+                        &-text
+                            position: absolute
+                            top: 100px
+                &-linieC
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    width: 65%
+                    max-width: 800px
+                    margin: 0 auto
+                    &--elementA
+                        position: relative
+                        display: flex
+                        flex-direction: column
+                        width: 160px
+                        height: 160px
+                        align-items: center
+                        border: 2px solid #AA8C41
+                        border-radius: 50%
+                        margin-bottom: 100px
+                        transition: .3s
+                        &:hover
+                            background-color: #AA8C41
+                        &:hover > .umsetzung__ico
+                            background-image: url(../ico/angebot/4implementationWhite.png)
+                        &:hover > .angebot__wrapper--elementePc-linieC--elementA-text > p
+                            color: #fff
+                        &-symbol__ico
+                            position: absolute
+                            top: 15px
+                            width: 70px
+                            height: 70px
+                            background-size: contain
+                            background-repeat: no-repeat
+                            background-position: center center
+                        &-text
+                            position: absolute
+                            top: 100px
+                    &--elementB
+                        position: relative
+                        display: flex
+                        flex-direction: column
+                        width: 160px
+                        height: 160px
+                        align-items: center
+                        border: 2px solid #AA8C41
+                        border-radius: 50%
+                        margin-bottom: 100px
+                        transition: .3s
+                        &:hover
+                            background-color: #AA8C41
+                        &:hover > .beratung__ico
+                            background-image: url(../ico/angebot/3discussWhite.png)
+                        &:hover > .angebot__wrapper--elementePc-linieC--elementB-text > p
+                            color: #fff
+                        &-symbol__ico
+                            position: absolute
+                            top: 15px
+                            width: 70px
+                            height: 70px
+                            background-size: contain
+                            background-repeat: no-repeat
+                            background-position: center center
+                        &-text
+                            position: absolute
+                            top: 100px
+                    
 .kontakt
     position: relative
     width: 100%

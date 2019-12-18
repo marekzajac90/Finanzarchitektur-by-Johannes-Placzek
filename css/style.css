@@ -100,8 +100,14 @@ p {
   line-height: 24px;
   letter-spacing: 1px;
   word-spacing: 2px;
-  text-align: justify;
+  text-align: left;
   color: #707070;
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  p {
+    text-align: center;
+  }
 }
 
 a {
@@ -181,8 +187,29 @@ span {
   background-repeat: no-repeat;
 }
 
+.analyse__ico {
+  background-image: url(../ico/angebot/1analyse.png);
+}
+
+.planung__ico {
+  background-image: url(../ico/angebot/2path.png);
+}
+
+.beratung__ico {
+  background-image: url(../ico/angebot/3discuss.png);
+}
+
+.umsetzung__ico {
+  background-image: url(../ico/angebot/4implementation.png);
+}
+
+.partnerschaft__ico {
+  background-image: url(../ico/angebot/5partnerschip.png);
+}
+
 .wrapper {
   width: 70%;
+  max-width: 1300px;
   margin: 0 auto;
   padding-top: 20px;
 }
@@ -775,7 +802,7 @@ span {
   margin: 1% 0 0 1%;
   background-image: url(../img/UeberMichFoto.jpg);
   background-size: cover;
-  background-position: center -35px;
+  background-position: center -25px;
   background-repeat: no-repeat;
 }
 
@@ -1150,6 +1177,15 @@ span {
   }
 }
 
+@media (min-width: 1300px) and (orientation: landscape) {
+  .break__philosophie--wrapper {
+    width: 50%;
+  }
+  .break__philosophie--wrapper-text {
+    line-height: 30px;
+  }
+}
+
 .break__philosophie--wrapper-heading {
   margin-bottom: 50px;
 }
@@ -1182,13 +1218,15 @@ span {
 }
 
 .angebot__wrapper--text {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   text-align: center;
+  max-width: 70%;
+  margin: 0 auto;
 }
 
 @media (min-width: 760px) and (orientation: portrait) {
   .angebot__wrapper--text {
-    margin-bottom: 100px;
+    padding-bottom: 100px;
   }
 }
 
@@ -1222,6 +1260,12 @@ span {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1024px) and (orientation: landscape) {
+  .angebot__wrapper--elementeMobile {
+    display: none;
   }
 }
 
@@ -1291,24 +1335,320 @@ span {
   text-align: center;
 }
 
-.analyse__ico {
-  background-image: url(../ico/angebot/1analyse.png);
+.angebot__wrapper--elementePc {
+  display: none;
 }
 
-.planung__ico {
-  background-image: url(../ico/angebot/2path.png);
-}
-
-.beratung__ico {
-  background-image: url(../ico/angebot/3discuss.png);
-}
-
-.umsetzung__ico {
-  background-image: url(../ico/angebot/4implementation.png);
-}
-
-.partnerschaft__ico {
-  background-image: url(../ico/angebot/5partnerschip.png);
+@media (min-width: 1024px) and (orientation: landscape) {
+  .angebot__wrapper--elementePc {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 815px;
+    margin: 0 auto;
+  }
+  .angebot__wrapper--elementePc-linieA {
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .angebot__wrapper--elementePc-linieA--elementA {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 160px;
+    height: 160px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 2px solid #AA8C41;
+    border-radius: 50%;
+    margin-bottom: 100px;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .angebot__wrapper--elementePc-linieA--elementA:hover {
+    background-color: #AA8C41;
+  }
+  .angebot__wrapper--elementePc-linieA--elementA:hover > .analyse__ico {
+    background-image: url(../ico/angebot/1analyseWhite.png);
+  }
+  .angebot__wrapper--elementePc-linieA--elementA:hover > .angebot__wrapper--elementePc-linieA--elementA-text > p {
+    color: #fff;
+  }
+  .angebot__wrapper--elementePc-linieA--elementA-symbol__ico {
+    position: absolute;
+    top: 15px;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .angebot__wrapper--elementePc-linieA--elementA-text {
+    position: absolute;
+    top: 100px;
+  }
+  .angebot__wrapper--elementePc-linieB {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .angebot__wrapper--elementePc-linieB--elementA {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 160px;
+    height: 160px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 2px solid #AA8C41;
+    border-radius: 50%;
+    margin-bottom: 100px;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .angebot__wrapper--elementePc-linieB--elementA:hover {
+    background-color: #AA8C41;
+  }
+  .angebot__wrapper--elementePc-linieB--elementA:hover > .partnerschaft__ico {
+    background-image: url(../ico/angebot/5partnerschipWhite.png);
+  }
+  .angebot__wrapper--elementePc-linieB--elementA:hover > .angebot__wrapper--elementePc-linieB--elementA-text > p {
+    color: #fff;
+  }
+  .angebot__wrapper--elementePc-linieB--elementA:hover .angebot__wrapper--elementePc-linieB-elementB--text5 {
+    opacity: 1;
+  }
+  .angebot__wrapper--elementePc-linieB--elementA-symbol__ico {
+    position: absolute;
+    top: 15px;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .angebot__wrapper--elementePc-linieB--elementA-text {
+    position: absolute;
+    top: 100px;
+  }
+  .angebot__wrapper--elementePc-linieB-elementB {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: relative;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 30%;
+    height: 130px;
+  }
+  .angebot__wrapper--elementePc-linieB-elementB--text1 {
+    position: absolute;
+    opacity: 1;
+  }
+  .angebot__wrapper--elementePc-linieB-elementB--text1-title {
+    text-align: center;
+    color: #AA8C41;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  .angebot__wrapper--elementePc-linieB-elementB--text1-text {
+    text-align: center;
+  }
+  .angebot__wrapper--elementePc-linieB-elementB--text5 {
+    position: absolute;
+    opacity: 0;
+  }
+  .angebot__wrapper--elementePc-linieB-elementB--text5-title {
+    text-align: center;
+    color: #AA8C41;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+  .angebot__wrapper--elementePc-linieB-elementB--text5-text {
+    text-align: center;
+  }
+  .angebot__wrapper--elementePc-linieB--elementC {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 160px;
+    height: 160px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 2px solid #AA8C41;
+    border-radius: 50%;
+    margin-bottom: 100px;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .angebot__wrapper--elementePc-linieB--elementC:hover {
+    background-color: #AA8C41;
+  }
+  .angebot__wrapper--elementePc-linieB--elementC:hover > .planung__ico {
+    background-image: url(../ico/angebot/2pathWhite.png);
+  }
+  .angebot__wrapper--elementePc-linieB--elementC:hover > .angebot__wrapper--elementePc-linieB--elementC-text > p {
+    color: #fff;
+  }
+  .angebot__wrapper--elementePc-linieB--elementC-symbol__ico {
+    position: absolute;
+    top: 15px;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .angebot__wrapper--elementePc-linieB--elementC-text {
+    position: absolute;
+    top: 100px;
+  }
+  .angebot__wrapper--elementePc-linieC {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 65%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .angebot__wrapper--elementePc-linieC--elementA {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 160px;
+    height: 160px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 2px solid #AA8C41;
+    border-radius: 50%;
+    margin-bottom: 100px;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .angebot__wrapper--elementePc-linieC--elementA:hover {
+    background-color: #AA8C41;
+  }
+  .angebot__wrapper--elementePc-linieC--elementA:hover > .umsetzung__ico {
+    background-image: url(../ico/angebot/4implementationWhite.png);
+  }
+  .angebot__wrapper--elementePc-linieC--elementA:hover > .angebot__wrapper--elementePc-linieC--elementA-text > p {
+    color: #fff;
+  }
+  .angebot__wrapper--elementePc-linieC--elementA-symbol__ico {
+    position: absolute;
+    top: 15px;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .angebot__wrapper--elementePc-linieC--elementA-text {
+    position: absolute;
+    top: 100px;
+  }
+  .angebot__wrapper--elementePc-linieC--elementB {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 160px;
+    height: 160px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: 2px solid #AA8C41;
+    border-radius: 50%;
+    margin-bottom: 100px;
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+  .angebot__wrapper--elementePc-linieC--elementB:hover {
+    background-color: #AA8C41;
+  }
+  .angebot__wrapper--elementePc-linieC--elementB:hover > .beratung__ico {
+    background-image: url(../ico/angebot/3discussWhite.png);
+  }
+  .angebot__wrapper--elementePc-linieC--elementB:hover > .angebot__wrapper--elementePc-linieC--elementB-text > p {
+    color: #fff;
+  }
+  .angebot__wrapper--elementePc-linieC--elementB-symbol__ico {
+    position: absolute;
+    top: 15px;
+    width: 70px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  .angebot__wrapper--elementePc-linieC--elementB-text {
+    position: absolute;
+    top: 100px;
+  }
 }
 
 .kontakt {

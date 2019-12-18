@@ -1,6 +1,33 @@
 const hamburger = document.querySelector(".header__nav--hamburger-js")
 const aside = document.querySelector(".header__aside")
 
+// angebot elemente
+const element1 = document.querySelector("#angebot__element1")
+const element2 = document.querySelector("#angebot__element2")
+const element3 = document.querySelector("#angebot__element3")
+const element4 = document.querySelector("#angebot__element4")
+const element5 = document.querySelector("#angebot__element5")
+const angebot__heading = document.querySelector("#angebot__heading")
+const angebot__text = document.querySelector("#angebot__text")
+
+$(element1).on('mouseover', function () {
+    angebot__heading.innerHTML = '1. Analyse'
+    angebot__text.innerHTML = 'Erfassen der Ist-Situation mit den individuellen Wünschen und Zielen des Kunden'});
+$(element2).on('mouseover', function () {
+    angebot__heading.innerHTML = '2. Planung'
+    angebot__text.innerHTML = 'Auswertung und Vermögensplanung mit Qualitätssiegel'});
+$(element3).on('mouseover', function () {
+    angebot__heading.innerHTML = '3. Beratung'
+    angebot__text.innerHTML = 'Persönliche Beratung, abgestimmt auf die individuellen Wünsche und Ziele des Kunden'});
+$(element4).on('mouseover', function () {
+    angebot__heading.innerHTML = '4. Umsetzung'
+    angebot__text.innerHTML = 'Realisierung der Vermögensplanung'});
+$(element5).on('mouseover', function () {
+    angebot__heading.innerHTML = '5. Partnerschaft'
+    angebot__text.innerHTML = 'Dauerhafte Betreuung und Partnerschaft'});
+
+// nav elemente
+
 const link__startseite = document.querySelector("#menu__link--startseite")
 const link__übermich = document.querySelector("#menu__link--über-mich")
 const link__leistungen = document.querySelector("#menu__link--leistungen")
@@ -208,3 +235,5 @@ $(link__kontakt_pc_float).on('click', function() {
     $(aside).removeClass("header__aside--active")
     $(hamburger).removeClass("is-active")
 });
+
+
