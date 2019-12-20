@@ -1714,7 +1714,7 @@ span {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 560px) and (orientation: landscape) {
   .kontakt__wrapper--elemente {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -1743,7 +1743,7 @@ span {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 560px) and (orientation: landscape) {
   .kontakt__wrapper--elemente-elementeLeft {
     margin-right: 30px;
   }
@@ -1910,7 +1910,7 @@ span {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 560px) and (orientation: landscape) {
   .kontakt__wrapper--elemente-elementeRight {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1996,7 +1996,7 @@ span {
   }
 }
 
-@media (min-width: 1024px) and (orientation: landscape) {
+@media (min-width: 560px) and (orientation: landscape) {
   .kontakt__wrapper--elemente-elementeRight_clock-text {
     margin-top: 0;
   }
