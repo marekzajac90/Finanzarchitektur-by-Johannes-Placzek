@@ -70,6 +70,8 @@ a
 span
     color: #AA8C41
     font-weight: 700
+.kontaktText
+    color: #aa8c41
 .button
     background-color: transparent
     border: 2px solid #AA8C41
@@ -127,13 +129,15 @@ span
     background-position: center center
     background-repeat: no-repeat
     background-size: cover
-    background-attachment: fixed
+    background-attachment: scroll
     @media (min-width: 360px) and (orientation: portrait)
         height: 50vh
     @media (min-width: 760px) and (orientation: portrait)
         height: 40vh
     @media (min-width: 560px) and (orientation: landscape)
         height: 70vh
+    @media (min-width: 1024px) and (orientation: landscape)
+        background-attachment: fixed
 .heading
     margin: 50px auto 70px
 .fsvideo
@@ -483,7 +487,7 @@ span
         background-position: -20px center
         background-repeat: no-repeat
         z-index: 1
-        background-attachment: fixed
+        background-attachment: scroll
         @media (min-width: 760px) and (orientation: portrait)
             background-position: 30% center
             background-size: 550px 350px
@@ -496,6 +500,7 @@ span
             background-position: 40% center
         @media (min-width: 1024px) and (orientation: landscape)
             background-size: 600px 400px
+            background-attachment: fixed
         @media (min-width: 1300px) and (orientation: landscape)
             background-size: 750px 500px
             background-position: 45% center
@@ -887,9 +892,150 @@ span
                         &-text
                             position: absolute
                             top: 100px
+        &--text
+            padding-bottom: 75px
                     
 .kontakt
     position: relative
     width: 100%
     min-height: 100vh
     background-color: #F8F8F8
+    &__wrapper
+        &--heading
+            margin: 50px 0
+        &--text
+            text-align: center
+        &--elemente
+            display: flex
+            flex-direction: column
+            margin-top: 50px
+            width: 100%
+            max-width: 900px
+            &-elementeLeft
+                display: flex
+                flex-direction: column
+                &_mail
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    margin-bottom: 50px
+                    &-ico
+                        position: relative
+                        background-image: url(../ico/mail.png)
+                        width: 60px
+                        height: 60px 
+                        background-position: center center
+                        background-repeat: no-repeat
+                        background-size: contain
+                        margin-bottom: 30px
+                        &::after
+                            position: absolute
+                            content: ''
+                            left: 50%
+                            top: 50%
+                            transform: translate(-50%, -50%)
+                            width: 160%
+                            height: 160%
+                            border: 2px solid #AA8C41
+                            border-radius: 50%
+                    &-text
+                        text-align: center
+                        font-size: 11px
+                &_phone
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    margin-bottom: 50px
+                    &-ico
+                        position: relative
+                        background-image: url(../ico/phone.png)
+                        width: 60px
+                        height: 60px 
+                        background-position: center center
+                        background-repeat: no-repeat
+                        background-size: contain
+                        margin-bottom: 30px
+                        &::after
+                            position: absolute
+                            content: ''
+                            left: 50%
+                            top: 50%
+                            transform: translate(-50%, -50%)
+                            width: 160%
+                            height: 160%
+                            border: 2px solid #AA8C41
+                            border-radius: 50%
+                    &-text
+                        text-align: center
+                        font-size: 11px
+                &_adresse
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    margin-bottom: 50px
+                    &-ico
+                        position: relative
+                        background-image: url(../ico/adresse.png)
+                        width: 60px
+                        height: 60px 
+                        background-position: center center
+                        background-repeat: no-repeat
+                        background-size: contain
+                        margin-bottom: 30px
+                        &::after
+                            position: absolute
+                            content: ''
+                            left: 50%
+                            top: 50%
+                            transform: translate(-50%, -50%)
+                            width: 160%
+                            height: 160%
+                            border: 2px solid #AA8C41
+                            border-radius: 50%
+                    &-text
+                        text-align: center
+                        font-size: 11px
+            &-elementeRight
+                display: flex
+                flex-direction: column
+                &_map
+                    width: 200px
+                    height: 200px
+                    margin: 0 auto 75px
+                    // margin-bottom: 75px
+                    border: 2px solid #AA8C41
+                    border-radius: 50%
+                &_clock
+                    display: flex
+                    flex-direction: column
+                    justify-content: center
+                    align-items: center
+                    margin-bottom: 50px
+                    &-ico
+                        position: relative
+                        background-image: url(../ico/clock.png)
+                        width: 60px
+                        height: 60px 
+                        background-position: center center
+                        background-repeat: no-repeat
+                        background-size: contain
+                        margin-bottom: 30px
+                        &::after
+                            position: absolute
+                            content: ''
+                            left: 50%
+                            top: 50%
+                            transform: translate(-50%, -50%)
+                            width: 160%
+                            height: 160%
+                            border: 2px solid #AA8C41
+                            border-radius: 50%
+                    &-text
+                        margin-top: 20px
+                        text-align: center
+                        font-size: 11px
+                        &:last-child
+                            margin-top: 0
