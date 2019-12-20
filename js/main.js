@@ -26,6 +26,21 @@ $(element5).on('mouseover', function () {
     angebot__heading.innerHTML = '5. Partnerschaft'
     angebot__text.innerHTML = 'Dauerhafte Betreuung und Partnerschaft'});
 
+// button kontakt link
+
+const header_kontakt = document.querySelector("#header_kontakt")
+const ich_kontakt = document.querySelector("#ich_kontakt")
+
+$(header_kontakt).on('click', function() {
+    $('html, body').animate({
+        scrollTop: $('#kontakt').offset().top
+    }, 800);
+});
+$(ich_kontakt).on('click', function() {
+    $('html, body').animate({
+        scrollTop: $('#kontakt').offset().top
+    }, 800);
+});
 // nav elemente
 
 const link__startseite = document.querySelector("#menu__link--startseite")
@@ -151,43 +166,31 @@ $(link__startseite_pc).on('click', function() {
     $('html, body').animate({
         scrollTop: $('#header').offset().top
     }, 800);
-    $(aside).removeClass("header__aside--active")
-    $(hamburger).removeClass("is-active")
 });
 $(link__übermich_pc).on('click', function() {
     $('html, body').animate({
         scrollTop: $('#über-mich').offset().top
     }, 800);
-    $(aside).removeClass("header__aside--active")
-    $(hamburger).removeClass("is-active")
 });
 $(link__leistungen_pc).on('click', function() {
     $('html, body').animate({
         scrollTop: $('#leistungen').offset().top
     }, 800);
-    $(aside).removeClass("header__aside--active")
-    $(hamburger).removeClass("is-active") 
 });
 $(link__angebot_pc).on('click', function() {
     $('html, body').animate({
         scrollTop: $('#angebot').offset().top
     }, 800);
-    $(aside).removeClass("header__aside--active")
-    $(hamburger).removeClass("is-active")
 });
 $(link__kariere_pc).on('click', function() {
     $('html, body').animate({
         scrollTop: $('#kariere').offset().top
     }, 800);
-    $(aside).removeClass("header__aside--active")
-    $(hamburger).removeClass("is-active")
 });
 $(link__kontakt_pc).on('click', function() {
     $('html, body').animate({
         scrollTop: $('#kontakt').offset().top
     }, 800);
-    $(aside).removeClass("header__aside--active")
-    $(hamburger).removeClass("is-active")
 });
 
 
@@ -197,43 +200,31 @@ $(link__startseite_pc_float).on('click', function() {
     $('html, body').animate({
         scrollTop: $('#header').offset().top
     }, 800);
-    $(aside).removeClass("header__aside--active")
-    $(hamburger).removeClass("is-active")
 });
 $(link__übermich_pc_float).on('click', function() {
     $('html, body').animate({
         scrollTop: $('#über-mich').offset().top
     }, 800);
-    $(aside).removeClass("header__aside--active")
-    $(hamburger).removeClass("is-active")
 });
 $(link__leistungen_pc_float).on('click', function() {
     $('html, body').animate({
         scrollTop: $('#leistungen').offset().top
     }, 800);
-    $(aside).removeClass("header__aside--active")
-    $(hamburger).removeClass("is-active") 
 });
 $(link__angebot_pc_float).on('click', function() {
     $('html, body').animate({
         scrollTop: $('#angebot').offset().top
     }, 800);
-    $(aside).removeClass("header__aside--active")
-    $(hamburger).removeClass("is-active")
 });
 $(link__kariere_pc_float).on('click', function() {
     $('html, body').animate({
         scrollTop: $('#kariere').offset().top
     }, 800);
-    $(aside).removeClass("header__aside--active")
-    $(hamburger).removeClass("is-active")
 });
 $(link__kontakt_pc_float).on('click', function() {
     $('html, body').animate({
         scrollTop: $('#kontakt').offset().top
     }, 800);
-    $(aside).removeClass("header__aside--active")
-    $(hamburger).removeClass("is-active")
 });
 
 
